@@ -357,7 +357,7 @@ impl Route {
     }
 
     pub fn gateway_bot() -> &'static str {
-        api!("/gateway/bot")
+        api!("/gateway")
     }
 
     pub fn group_recipient(group_id: u64, user_id: u64) -> String {

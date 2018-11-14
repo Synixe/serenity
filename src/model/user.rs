@@ -218,7 +218,7 @@ impl CurrentUser {
         let client_id = http::get_current_application_info().map(|v| v.id)?;
 
         let mut url = format!(
-            "https://discordapp.com/api/oauth2/authorize?client_id={}&scope=bot",
+            "https://discordapp.com/api/oauth2/authorize?client_id={}",
             client_id
         );
 
