@@ -693,13 +693,13 @@ pub fn edit_profile(map: &JsonMap) -> Result<CurrentUser> {
 
     let mut value = serde_json::from_reader::<HyperResponse, Value>(response)?;
 
-    if let Some(map) = value.as_object_mut() {
+    /*if let Some(map) = value.as_object_mut() {
         if !TOKEN.lock().starts_with("Bot ") {
             if let Some(Value::String(token)) = map.remove("token") {
                 set_token(&token);
             }
         }
-    }
+    }*/
 
     serde_json::from_value::<CurrentUser>(value).map_err(From::from)
 }
